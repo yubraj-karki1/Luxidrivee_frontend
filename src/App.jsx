@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Header from './components/Dashboard/Header';  // Importing Header component
 import Login from './components/Login/login';
 import SignUp from './components/signup/signup';
-// import BookingForm from './components/Booking/booking';
+import Booking from './components/Booking/booking';
 
 function App() {
   return (
@@ -14,8 +14,7 @@ function App() {
           <Route index element={<Header />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<SignUp />} />
-          {/* <Route path="/Booking" element={<BookingForm />} /> */}
-
+          <Route path='/Booking' element={<Booking/>}/>
         </Routes>
       </Router>
     </>
