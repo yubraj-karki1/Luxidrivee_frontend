@@ -51,7 +51,7 @@ const Header = () => {
                 <img src={vehicle.img} alt={vehicle.title} />
                 <div className="range__details">
                   <h4>{vehicle.title}</h4>
-                  <a href="#"><i className="ri-arrow-right-line"></i></a>
+                  <a href="Booking"><i className="ri-arrow-right-line"></i></a>
 
                 </div>
               </div>
