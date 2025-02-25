@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "../Styles/book.css";
+import { ToastContainer, toast } from 'react-toastify'; // Import ToastContainer and toast
+import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
+import axios from "axios";
 
-const booking = () => {
+const Booking = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,10 +18,38 @@ const booking = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Booking Details:", formData);
-        alert("Booking submitted successfully!");
+
+        try {
+            // Ensure the correct backend URL and port
+            const response = await axios.post("http://localhost:5000/booking/create", formData, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            console.log("Booking successful:", response.data);
+
+            // Display success toast
+            toast.success("Booking submitted successfully!");
+
+            // Reset form data
+            setFormData({
+                name: "",
+                email: "",
+                people: "",
+                pickUpTime: "",
+                dropTime: "",
+                phoneNumber: ""
+            });
+        } catch (error) {
+            console.error("Booking error:", error.response?.data || error.message);
+
+            // Display error toast
+            toast.error("Failed to submit booking. Please try again.");
+        }
     };
 
     return (
@@ -70,8 +101,9 @@ const booking = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer /> {/* Add ToastContainer to render toasts */}
         </div>
     );
 };
 
-export default booking;
+export default Booking;
