@@ -28,7 +28,7 @@
   font-size: 3.25rem;
   font-weight: 700;
   font-family: var(--header-font);
-  color: var(--white);
+  color: var(--text-dark);
   letter-spacing: -5px;
   line-height: 4.25rem;
 }
@@ -174,7 +174,7 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: var(--white);
+  background-color: var(--text-dark);
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
