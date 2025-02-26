@@ -5,6 +5,7 @@ import Header from './components/Dashboard/Header';  // Importing Header compone
 import Login from './components/Login/login';
 import SignUp from './components/signup/signup';
 import Booking from './components/Booking/booking';
+// import AddVehicle from './AddVehicles/AddVehicle';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<SignUp />} />
           <Route path='/Booking' element={<Booking/>}/>
+          {/* <Route path='/AddVehicle' element={<AddVehicle/>}/> */}
+
           
         </Routes>
       </Router>

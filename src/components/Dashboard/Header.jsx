@@ -111,6 +111,17 @@ const Header = () => {
                 <li><a href="#">Support</a></li>
               </ul>
             </div>
+            
+            {/* Add social links here */}
+            <div className="footer__col">
+              <h4>Follow Us</h4>
+              <ul className="footer__social">
+                <li><a href="#"><i className="ri-facebook-fill"></i></a></li>
+                <li><a href="#"><i className="ri-twitter-fill"></i></a></li>
+                <li><a href="#"><i className="ri-instagram-fill"></i></a></li>
+                <li><a href="#"><i className="ri-linkedin-fill"></i></a></li>
+              </ul>
+            </div>
           </div>
         </footer>
       );

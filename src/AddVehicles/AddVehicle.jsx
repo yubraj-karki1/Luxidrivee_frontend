@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddVehicle.css';
+import '../styles/AddVehicle.css';
 
 const AddVehicle = ({ onAdd }) => {
   const [vehicle, setVehicle] = useState({ img: '', title: '' });
