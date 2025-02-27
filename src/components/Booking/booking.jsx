@@ -41,7 +41,7 @@ const Booking = () => {
                 email: "",
                 people: "",
                 pickUpTime: "",
-                dropTime: "",
+                Location: "",
                 phoneNumber: ""
             });
         } catch (error) {
@@ -88,8 +88,8 @@ const Booking = () => {
                             <input type="text" name="pickUpTime" placeholder="Time" required value={formData.pickUpTime} onChange={handleChange} />
                         </div>
                         <div>
-                            <span>Drop Time?</span>
-                            <input type="text" name="dropTime" placeholder="Time" required value={formData.dropTime} onChange={handleChange} />
+                            <span>Location?</span>
+                            <input type="text" name="dropLocation" placeholder="Location" required value={formData.dropLocation} onChange={handleChange} />
                         </div>
                         <div>
                             <span>Your phone number?</span>
