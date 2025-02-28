@@ -10,7 +10,7 @@ const Booking = () => {
         email: "",
         people: "",
         pickUpTime: "",
-        dropTime: "",
+        Location: "", 
         phoneNumber: ""
     });
 
@@ -24,7 +24,7 @@ const Booking = () => {
 
         try {
             // Ensure the correct backend URL and port
-            const response = await axios.post("http://localhost:5000/booking/create", formData, {
+            const response = await axios.post("http://localhost:5000/Booking/create", formData, {
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -85,7 +85,7 @@ const Booking = () => {
                         </div>
                         <div>
                             <span>Pick Up Time?</span>
-                            <input type="text" name="pickUpTime" placeholder="Time" required value={formData.pickUpTime} onChange={handleChange} />
+                            <input type="time" name="pickUpTime" placeholder="Time" required value={formData.pickUpTime} onChange={handleChange} />
                         </div>
                         <div>
                             <span>Location?</span>
@@ -93,7 +93,7 @@ const Booking = () => {
                         </div>
                         <div>
                             <span>Your phone number?</span>
-                            <input type="number" name="phoneNumber" placeholder="Write your number here..." required value={formData.phoneNumber} onChange={handleChange} />
+                            <input type="text" name="phoneNumber" placeholder="Write your number here..." required value={formData.phoneNumber} onChange={handleChange} />
                         </div>
                         <div id="submit">
                             <input type="submit" value="SUBMIT" />
